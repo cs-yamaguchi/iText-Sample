@@ -90,9 +90,9 @@ public class ImagepdfAction extends AbstractAction {
 //	    Rectangle rectangle = new Rectangle(800, 600);
 	    Rectangle rectangle = new Rectangle(1058, 875);
 	    Document doc = new Document(rectangle, 0, 0, 0, 0);
-	    doc.addAuthor("Benesse Corporation");
-	    doc.addTitle("たまひよ");
-	    doc.addSubject("フォトカード");
+	    doc.addAuthor("Comster Yamaguchi");
+	    doc.addTitle("iText Sample");
+	    doc.addSubject("PhoteCard");
 	    doc.addCreationDate();
 
 		PdfWriter pdfwriter = PdfWriter.getInstance(doc, byteout);
@@ -278,6 +278,7 @@ public class ImagepdfAction extends AbstractAction {
 
 //        table.addCell(table2);
 
+        doc.add(table);
         doc.add(table);
 
 

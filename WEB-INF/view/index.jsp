@@ -14,6 +14,7 @@
 	<li><a href="/itext-sample/imagepng/">透過画像確認</a></li>
 	<li><a href="/itext-sample/imagepdf/">画像取り込み</a></li>
 	<li><a href="/itext-sample/qrcode/">QRコードメーカー</a></li>
+	<li><a href="/itext-sample/photecard/">フォトカードサンプル</a></li>
 </ul>
 </section>
 </body>

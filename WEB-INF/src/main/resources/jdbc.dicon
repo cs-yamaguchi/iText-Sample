@@ -3,7 +3,6 @@
 	"http://www.seasar.org/dtd/components24.dtd">
 <components namespace="jdbc">
 	<include path="jta.dicon"/>
-	<include path="property.dicon"/>
 
 	<!-- for Oracle -->
 	<component name="xaDataSource"
@@ -11,9 +10,9 @@
 		<property name="driverClassName">
 			"oracle.jdbc.driver.OracleDriver"
 		</property>
-		<property name="URL">prop["jdbc_url"]</property>
-		<property name="user">prop["jdbc_user"]</property>
-		<property name="password">prop["jdbc_pass"]</property>
+		<property name="URL"></property>
+		<property name="user"></property>
+		<property name="password"></property>
 	</component>
 
 	<component name="connectionPool"
