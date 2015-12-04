@@ -1,0 +1,75 @@
+header#header h1 {
+	text-align: center;
+	font-size: 18pt;
+	font-weight: bold;
+	background-color: gray;
+	border:2px solid gray;
+	color: white;
+}
+
+section#main {
+	width: 100%;
+	min-height: 500px;
+	float: none;
+	margin-top: 30px;
+}
+
+#menu ul {
+	clear: both;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+#menu li {
+	list-style: none;
+	margin: 100px 0;
+	padding: 0 0 0 25px;
+	text-shadow: 0 1px 0 #fff;
+}
+
+#menu li a {
+	text-decoration: underline;
+	display: inline-block;
+}
+
+.to-menu {
+	text-align: right;
+	padding: 0 25px 25px 0;
+}
+
+.convert ul {
+	clear: both;
+	margin: 100px;
+	padding: 0;
+	text-align: center;
+}
+
+.convert li {
+	list-style: none;
+	margin: 30px 0 0 0;
+	text-shadow: 0 1px 0 #fff;
+}
+
+.alignment {
+	float:left;
+}
+
+.centering {
+	width:85%;
+	margin: 0 0 0 auto;
+}
+
+p.error-message {
+	color: red;
+}
+
+.input-box {
+	height: 90px;
+	margin-top: 70px;
+}
+
+div.error-message {
+	margin-top: 100px;
+	text-align: center;
+}

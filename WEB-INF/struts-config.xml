@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+
+<!-- ======================================== Form Bean Definitions -->
+
+    <form-beans>
+    </form-beans>
+
+<!-- ================================= Global Exception Definitions -->
+
+    <global-exceptions>
+<!--
+        <exception path="/WEB-INF/view/errorStatus/error500.html" key="errors.system" type="java.lang.RuntimeException"/>
+-->
+    </global-exceptions>
+
+<!-- =================================== Global Forward Definitions -->
+
+    <global-forwards>
+    </global-forwards>
+
+<!-- =================================== Action Mapping Definitions -->
+
+    <action-mappings>
+    </action-mappings>
+
+
+<!-- ===================================== Controller Configuration -->
+
+<!--         maxFileSize="1024K" -->
+<!--         maxFileSize="10192K" -->
+    <controller
+        maxFileSize="10192K"
+        bufferSize="1024"
+        processorClass="jp.co.comster.itext.sample.util.SyncS2RequestProcessor"
+        multipartClass="org.seasar.struts.upload.S2MultipartRequestHandler"/>
+
+
+<!-- ================================ Message Resources Definitions -->
+
+    <message-resources parameter="application"
+        factory="org.seasar.struts.util.S2PropertyMessageResourcesFactory"/>
+
+<!-- ======================================= Plug Ins Configuration -->
+
+    <plug-in className="org.seasar.struts.validator.S2ValidatorPlugIn">
+        <set-property
+          property="pathnames"
+          value="/WEB-INF/validator-rules.xml"/>
+    </plug-in>
+</struts-config>
+

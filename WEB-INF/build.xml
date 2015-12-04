@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project basedir="." default="build" name="itext-sample">
+    <property name="TOMCAT_HOME" value="/opt/comster-sample/tomcat"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.6"/>
+    <property name="source" value="1.6"/>
+    <path id="classpath">
+        <pathelement location="classes"/>
+        <fileset dir="lib">
+            <include name="*.jar"/>
+        </fileset>
+        <pathelement location="${TOMCAT_HOME}/lib/servlet-api.jar"/>
+        <pathelement location="${TOMCAT_HOME}/lib/jasper.jar"/>
+        <pathelement location="${TOMCAT_HOME}/lib/jsp-api.jar"/>
+        <pathelement location="${TOMCAT_HOME}/lib/el-api.jar"/>
+        <pathelement location="${TOMCAT_HOME}/lib/annotations-api.jar"/>
+    </path>
+
+	<target name="init">
+        <mkdir dir="classes"/>
+        <copy includeemptydirs="false" todir="classes">
+            <fileset dir="src/main/resources">
+                <include name="**/*.sql"/>
+                <include name="**/*.dicon"/>
+                <include name="**/*.properties"/>
+                <include name="**/*.txt"/>
+                <include name="**/*.xml"/>
+            </fileset>
+        </copy>
+    </target>
+
+    <target name="clean">
+        <delete dir="classes"/>
+    </target>
+
+	<target depends="init" name="build">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="classes" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src/main/java"/>
+            <src path="src/main/resources"/>
+            <classpath refid="classpath"/>
+        </javac>
+    </target>
+</project>

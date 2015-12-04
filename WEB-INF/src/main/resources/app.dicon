@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE components PUBLIC "-//SEASAR//DTD S2Container 2.4//EN"
+	"http://www.seasar.org/dtd/components24.dtd">
+<components>
+  <include path="convention.dicon"/>
+  <include path="aop.dicon"/>
+  <include path="j2ee.dicon"/>
+  <include path="s2jdbc.dicon"/>
+  <include path="s2csv.dicon"/>
+  <include path="property.dicon"/>
+  <component name="actionMessagesThrowsInterceptor" class="org.seasar.struts.interceptor.ActionMessagesThrowsInterceptor"/>
+  <component name="customThrowableInterceptor" class="jp.co.comster.itext.sample.common.interceptor.ThrowableInterceptor"/>
+  <component name="traceInterceptor" class="jp.co.comster.itext.sample.common.interceptor.TraceInterceptor"/>
+
+  <!-- プロパティファイル -->
+  <component name="typeProperties" class="jp.co.comster.itext.sample.util.TypeProperties" instance="singleton">
+    <arg>prop</arg>
+  </component>
+
+</components>
